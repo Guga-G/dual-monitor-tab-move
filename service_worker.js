@@ -1,9 +1,7 @@
-// =====================================================
-// New Monitor Tab Move — ULTRA-FAST STABLE BUILD
+// Dual Monitor Tab Move - FAST STABLE BUILD
 // MV3 Service Worker
-// =====================================================
 
-const DEBUG = false; // set false when fully stable
+const DEBUG = false;
 const DEBOUNCE_MS = 120;
 
 let lastRun = 0;
@@ -12,9 +10,7 @@ function log(...a) {
   if (DEBUG) console.log("[NMTM]", ...a);
 }
 
-// =====================================================
 // COMMAND HANDLER
-// =====================================================
 
 chrome.commands.onCommand.addListener(async (cmd) => {
   const now = Date.now();
@@ -32,9 +28,8 @@ chrome.commands.onCommand.addListener(async (cmd) => {
   }
 });
 
-// =====================================================
+
 // CORE
-// =====================================================
 
 async function move(wantIncog) {
   const srcWin = await getCurrentWindow();
@@ -82,9 +77,7 @@ async function move(wantIncog) {
   restoreFullscreen(tab.id, fsInfo);
 }
 
-// =====================================================
-// FULLSCREEN (INCognito-STABLE, RETRY SAFE)
-// =====================================================
+// FULLSCREEN (Incognito-stable, retry safe)
 
 async function getFullscreenInfo(tabId) {
   try {
@@ -145,9 +138,7 @@ function restoreFullscreen(tabId, fs) {
   });
 }
 
-// =====================================================
-// WINDOW DETECTION
-// =====================================================
+// WINDOW MODE DETECTION
 
 async function findDestWindow(area, incog, excludeId) {
   const wins = await promisify(chrome.windows.getAll, {});
@@ -182,9 +173,7 @@ async function findDestWindow(area, incog, excludeId) {
   return candidates[0];
 }
 
-// =====================================================
 // HELPERS
-// =====================================================
 
 function exec(tabId, func, arg) {
   return new Promise(resolve =>
@@ -269,4 +258,5 @@ async function focusAndMaximize(winId, area) {
 function promisify(fn, ...args) {
   return new Promise(res => fn(...args, r => res(r)));
 }
+
 
