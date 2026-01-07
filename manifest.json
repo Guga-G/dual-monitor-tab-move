@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "New Monitor Tab Move",
+  "name": "Dual Monitor Tab Move",
   "version": "1.1.0",
-  "description": "Ultra-fast move of active tab to next monitor with fullscreen restore (YouTube/Twitch).",
+  "description": "Fast move of active tab to next monitor with maximized screen restore.",
   "permissions": [
     "tabs",
     "windows",
@@ -24,3 +24,4 @@
     }
   }
 }
+
