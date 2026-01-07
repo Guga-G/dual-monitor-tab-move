@@ -1,12 +1,12 @@
 # Dual Monitor Tab Move
 
 Move the active Chrome tab to the next monitor and merge it into an existing window,
-while preserving fullscreen state on supported sites (YouTube, Twitch).
+while preserving state.
 
 ## Features
 - Move active tab to the next monitor
 - Merge into an existing window (normal or incognito)
-- Preserve fullscreen playback
+- Preserve playback
 - Separate behavior for normal and incognito windows
 - No tracking, no analytics, no network requests
 
@@ -16,10 +16,6 @@ while preserving fullscreen state on supported sites (YouTube, Twitch).
 
 Shortcuts can be customized in:
 chrome://extensions/shortcuts
-
-## Notes
-Mouse buttons are not supported directly by Chrome shortcuts.
-Advanced users may remap mouse buttons to keyboard shortcuts using external tools.
 
 ## Privacy
 This extension does not collect, store, or transmit any data.
